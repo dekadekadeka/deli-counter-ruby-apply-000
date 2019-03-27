@@ -2,14 +2,14 @@ katz_deli = []
 
 # Write your code here.
 def line(katz_deli)
-  if katz_deli == []
+  if katz_deli.empty?
     puts "The line is currently empty."
   else
     line_number = ""
     katz_deli.each_with_index do |name, index|
     line_number = line_number + " " + (index + 1).to_s + ". " + name
   end
-  puts "The line is currently:#{line_number}"
+    puts "The line is currently:#{line_number}"
   end
 end
 
@@ -19,7 +19,7 @@ def take_a_number(katz_deli, name)
 end
 
 def now_serving(katz_deli)
-  if katz_deli == []
+  if katz_deli.empty?
     puts "There is nobody waiting to be served!"
   else
     name = katz_deli.shift
